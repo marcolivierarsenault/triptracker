@@ -53,10 +53,18 @@ def serve_layout():
                 html.P(str(current_price) + '$', style={'color': 'green', 'font-size': '25pt'})
             ]),
             html.P('C\'est une augmentation de '+ str(abs_diff)+'$ ('+str.format("{0:.1f}", rel_divv)+'%)'),
+            html.P('Basé sur un prix d\'achat de 4317$'),
         ], style={'width': '1000px', 'margin-top': '0px', 'margin-bottom': '0px', 'margin-left': 'auto', 'margin-right': 'auto', 'background-color': '#EEEEEE', 'text-align': 'center', 'padding': '20px 20px 20px 20px'})
     else:
         #CHEAPER
-        price = 2
+        price = html.Div([
+            html.P('Le prix courant du voyage est de '),
+            html.Div([
+                html.P(str(current_price) + '$', style={'color': 'red', 'font-size': '25pt'})
+            ]),
+            html.P('C\'est une diminution de '+ str(abs_diff)+'$ ('+str.format("{0:.1f}", rel_divv)+'%)'),
+            html.P('Basé sur un prix d\'achat de 4317$'),
+        ], style={'width': '1000px', 'margin-top': '0px', 'margin-bottom': '0px', 'margin-left': 'auto', 'margin-right': 'auto', 'background-color': '#EEEEEE', 'text-align': 'center', 'padding': '20px 20px 20px 20px'})
 
     return_html = html.Div(children=[
         html.H1(children='Prix Voyage au Mexique 2019' , style={'width': '1000px', 'margin-top': '30px', 'margin-bottom': '30px', 'margin-left': 'auto', 'margin-right': 'auto', 'background-color': '#EEEEEE', 'text-align': 'center', 'padding': '20px 20px 20px 20px'}),

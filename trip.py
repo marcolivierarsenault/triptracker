@@ -7,8 +7,12 @@ import dash_html_components as html
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+# external JavaScript files
+external_scripts = ['https://www.googletagmanager.com/gtag/js?id=UA-145454901-1']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, external_scripts=external_scripts)
 app.title = 'Mexique 2019'
+
 
 def serve_layout():
 

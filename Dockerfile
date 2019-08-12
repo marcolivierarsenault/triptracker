@@ -4,9 +4,9 @@ EXPOSE 8050
 
 WORKDIR /usr/src/app
 
-RUN pip install --no-cache-dir dash boto3
+RUN pip install --no-cache-dir dash boto3 gunicorn
 
 COPY trip.py .
 COPY assets ./assets
 
-CMD [ "python", "./trip.py" ]
+CMD [ "gunicorn", "-b", "0.0.0.0:8050", "trip:server" ]

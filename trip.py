@@ -81,7 +81,9 @@ def serve_layout():
                     {'x': ordered_data[0], 'y': ordered_data[1], 'type': 'line'},
                 ],
                 'layout': {
-                    'title': 'Évolution du prix du voyage'
+                    'title': 'Évolution du prix du voyage',
+                    'yaxis': {'title': 'Prix $'},
+                    'xaxis': {'title': 'Date'}
                 }
             }, 
             style={'width': '1000px', 'margin-top': '30px', 'margin-bottom': '30px', 'margin-left': 'auto', 'margin-right': 'auto', 'background-color': '#EEEEEE', 'text-align': 'center', 'padding': '20px 20px 20px 20px'}
@@ -92,5 +94,7 @@ def serve_layout():
 
 app.layout = serve_layout
 
+server = app.server
+
 if __name__ == '__main__':
-    app.run_server(debug=False, host='0.0.0.0')
+    app.run_server(debug=True, host='0.0.0.0')

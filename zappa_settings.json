@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "app_function": "trip.server",
+        "aws_region": "ca-central-1",
+        "profile_name": "default",
+        "project_name": "triptracker",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-zn8xj0zzg",
+        "domain": "voyage.coffeeanddata.ca",
+        "certificate_arn": "arn:aws:acm:us-east-1:209788288140:certificate/2d8a138f-d5f5-4901-bde4-8742ab5f3a43",
+        "slim_handler": true,
+        "keep_warm": false
+    }
+}

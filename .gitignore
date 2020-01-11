@@ -201,4 +201,8 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
+pyenv/
+
 # End of https://www.gitignore.io/api/flask,python,virtualenv
+
+
